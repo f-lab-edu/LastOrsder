@@ -1,3 +1,5 @@
 rootProject.name = 'last-order'
 include 'notification'
+include 'account'
+include 'shop'
 
