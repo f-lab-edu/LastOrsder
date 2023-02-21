@@ -1,4 +1,14 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
+    implementation project(":common")
+
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.6.RELEASE'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-aws-messaging', version: '2.2.6.RELEASE'
+
+    implementation 'com.github.shin285:KOMORAN:3.3.4'
 }
 
 tasks.getByName('bootJar') {
