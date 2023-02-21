@@ -1,5 +1,6 @@
 package jw.project.presentation.request;
 
+import jw.project.application.command.SignupCommand;
 import jw.project.presentation.enums.Role;
 import lombok.Getter;
 

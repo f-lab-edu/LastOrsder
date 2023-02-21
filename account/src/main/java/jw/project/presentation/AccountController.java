@@ -17,7 +17,7 @@ public class AccountController {
     private final AccountService accountService;
 
     @PostMapping("/signup")
-    public void signup(@RequestBody SignupRequest signUp) {
-        accountService.signup(new SignupCommand(signUp.getEmail(), signUp.getPassword()));
+    public void signup(@RequestBody SignupRequest request) {
+        accountService.signup(new SignupCommand(request));
     }
 }
