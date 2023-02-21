@@ -15,7 +15,7 @@ public class ShopController {
 
     private final ShopService shopService;
 
-    @PostMapping("/addShop")
+    @PostMapping("/add")
     public void addShop(@RequestBody RegisterShopRequest request){
         shopService.register(request.toCommand());
     }
