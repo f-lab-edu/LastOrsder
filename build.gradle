@@ -2,15 +2,31 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.2'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id "io.freefair.lombok" version "6.6"
 }
 
-group = 'jw.project'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+subprojects {
+	group 'org.example'
+	version '1.0-SNAPSHOT'
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
+	apply plugin: 'java'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'io.freefair.lombok'
+
+	sourceCompatibility = 17
+
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	}
+
+	repositories {
+		mavenCentral()
+	}
+
+	test {
+		useJUnitPlatform()
 	}
 }
 
@@ -20,8 +36,6 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
