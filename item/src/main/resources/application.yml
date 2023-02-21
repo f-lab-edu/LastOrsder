@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://tutorial-rds.c5ngdfgsyitn.ap-northeast-2.rds.amazonaws.com:3306/demo?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: admin
+    password: wldnd506
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database : mysql
+
+  logging:
+    level:
+      org.hibernate.type: trace # 실제 들어가는 파라미터값 찍어주는 설정
+      com:
+        amazonaws:
+          util:
+            EC2MetadataUtils: error
+
