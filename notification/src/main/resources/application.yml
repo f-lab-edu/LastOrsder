@@ -1,0 +1,16 @@
+server:
+  port : 8081
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIA5VPD35GFMK4J5S6Z
+      secret-key: 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
+    region:
+      static: ap-northeast-2 # AWS SQS의 리전정보
+    stack:
+      auto: false
+    sqs:
+      queue:
+        name: MyQueue   # AWS에서 생성한 Queue 이름
+        url: https://sqs.ap-northeast-2.amazonaws.com/939465107850/MyQueue # 생성한 SQS 큐 url
