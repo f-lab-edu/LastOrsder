@@ -40,8 +40,8 @@ env:
   ITEM_ECR_REPOSITORY: Item           # set this to your Amazon ECR repository name
   SHOP_ECR_REPOSITORY: Shop           # set this to your Amazon ECR repository name
   NOTIFICATION_ECR_REPOSITORY: Notification           # set this to your Amazon ECR repository name
-  ACCOUNT_ECR_REPOSITORY: Account           # set this to your Amazon ECR repository name
-  ACCOUNT_ECS_SERVICE: AccountService                 # set this to your Amazon ECS service name
+  ECR_REPOSITORY: Account           # set this to your Amazon ECR repository name
+  ECS_SERVICE: AccountService                 # set this to your Amazon ECS service name
   ECS_CLUSTER: AccountCluster                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: /Account-ECS-Definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
