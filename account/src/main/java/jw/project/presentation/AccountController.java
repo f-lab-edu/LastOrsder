@@ -4,11 +4,7 @@ import jw.project.application.AccountService;
 import jw.project.application.command.SignupCommand;
 import jw.project.presentation.request.SignupRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,5 +16,20 @@ public class AccountController {
     @PostMapping("/signup")
     public void signup(@RequestBody SignupRequest request) {
         accountService.signup(new SignupCommand(request));
+    }
+
+    @PostMapping("/keyword")
+    public void addKeyword(String accountId, String keyword) {
+        accountService.addKeyword(accountId, keyword);
+    }
+
+    @GetMapping("/user")
+    public String findUser(){
+        return accountService.findUser();
+    }
+
+    @PostMapping("ping")
+    public String pong(){
+        return "pong";
     }
 }
