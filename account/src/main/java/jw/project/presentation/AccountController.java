@@ -28,8 +28,8 @@ public class AccountController {
         return accountService.findUser();
     }
 
-    @PostMapping("ping")
+    @PostMapping("/ping")
     public String pong(){
-        return "pong";
+        return "pong22";
     }
 }
