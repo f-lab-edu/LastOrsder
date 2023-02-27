@@ -19,4 +19,9 @@ public class ShopController {
     public void addShop(@RequestBody RegisterShopRequest request){
         shopService.register(request.toCommand());
     }
+
+    @PostMapping("/ping")
+    public String ping(){
+        return "pong";
+    }
 }
