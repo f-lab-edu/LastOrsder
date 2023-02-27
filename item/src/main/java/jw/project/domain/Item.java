@@ -1,10 +1,11 @@
 package jw.project.domain;
 
-import jakarta.persistence.*;
 import jw.project.application.command.AddItemCommand;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Entity
 @Getter
