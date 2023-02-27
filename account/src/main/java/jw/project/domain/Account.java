@@ -1,10 +1,10 @@
 package jw.project.domain;
 
-import jakarta.persistence.*;
 import jw.project.application.command.SignupCommand;
 import jw.project.presentation.enums.Role;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
